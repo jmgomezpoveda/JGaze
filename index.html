@@ -1,51 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>JGaze by jmgomezpoveda</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
     <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <title>JGaze by jmgomezpoveda</title>
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/jmgomezpoveda/JGaze">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/jmgomezpoveda/JGaze/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/jmgomezpoveda/JGaze/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <div id="container">
+      <div class="inner">
 
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
+        <header>
           <h1>JGaze</h1>
-          <p>Gaze library in Java</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/jmgomezpoveda">jmgomezpoveda</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+          <h2>Gaze library in Java</h2>
+        </header>
 
-        <h1>
-<a name="jgaze" class="anchor" href="#jgaze"><span class="octicon octicon-link"></span></a>JGaze</h1>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/jmgomezpoveda/JGaze/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/jmgomezpoveda/JGaze/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/jmgomezpoveda/JGaze" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
-<p>Gaze library in Java</p>
-      </section>
+        <hr>
 
+        <section id="main_content">
+          <p>© 2014 Jose Manuel Gómez Poveda.</p>
+
+<p>Eye tracking and gaze library in Java, offering the following functionalities:</p>
+
+<ul>
+<li>Tracking user features, such as the head, eyes, pupils and eye corners, nose, and mouth</li>
+<li>Blink detection</li>
+<li>Generation of gaze heat maps and visualisations of saccades and fixations</li>
+<li>Supports exporting data for offline analysis</li>
+<li>Abstraction layer for working with video files, images or live video sources in the same way</li>
+<li>WebSockets communication if the Webbit library is included</li>
+</ul><p>Using OpenCV for many low-level operations, so the speed is very close to that of implementations in C++.</p>
+
+<h2>
+<a name="sample-program" class="anchor" href="#sample-program"><span class="octicon octicon-link"></span></a>Sample program</h2>
+
+<p>Sample program that performs face, eye and pupil detection in just a few lines of code:</p>
+
+<div class="highlight highlight-java"><pre><span class="kn">import</span> <span class="nn">org.dreamcoder.jgaze.detectors.FacialFeaturesDetector</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.dreamcoder.jgaze.io.SimpleFrameGrabber</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.dreamcoder.jgaze.ui.CanvasFrame</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.dreamcoder.jgaze.util.OpenCvUtils</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.opencv.core.Mat</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PupilDetectMin</span>
+<span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span>
+    <span class="o">{</span>
+        <span class="n">OpenCvUtils</span><span class="o">.</span><span class="na">LoadLibrariesDialog</span><span class="o">();</span>
+
+        <span class="n">SimpleFrameGrabber</span> <span class="n">grabber</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleFrameGrabber</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">640</span><span class="o">,</span> <span class="mi">480</span><span class="o">,</span> <span class="mi">30</span><span class="o">);</span>
+
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">Mat</span> <span class="n">origImg</span> <span class="o">=</span> <span class="n">grabber</span><span class="o">.</span><span class="na">grab</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+
+            <span class="n">FacialFeaturesDetector</span> <span class="n">detector</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FacialFeaturesDetector</span><span class="o">(</span><span class="n">origImg</span><span class="o">.</span><span class="na">width</span><span class="o">(),</span> <span class="n">origImg</span><span class="o">.</span><span class="na">height</span><span class="o">()).</span><span class="na">addPupilDetector</span><span class="o">();</span>
+
+            <span class="n">CanvasFrame</span> <span class="n">frame</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CanvasFrame</span><span class="o">(</span><span class="s">"PupilDetectMin"</span><span class="o">,</span> <span class="n">origImg</span><span class="o">.</span><span class="na">width</span><span class="o">(),</span> <span class="n">origImg</span><span class="o">.</span><span class="na">height</span><span class="o">());</span>
+
+            <span class="k">while</span> <span class="o">(</span><span class="n">frame</span><span class="o">.</span><span class="na">isVisible</span><span class="o">())</span>
+            <span class="o">{</span>
+                <span class="n">origImg</span> <span class="o">=</span> <span class="n">grabber</span><span class="o">.</span><span class="na">grab</span><span class="o">();</span>
+
+                <span class="n">detector</span><span class="o">.</span><span class="na">detect</span><span class="o">(</span><span class="n">origImg</span><span class="o">);</span>
+
+                <span class="n">detector</span><span class="o">.</span><span class="na">drawBoundingBoxes</span><span class="o">(</span><span class="n">origImg</span><span class="o">);</span>
+                <span class="n">detector</span><span class="o">.</span><span class="na">drawEyes</span><span class="o">(</span><span class="n">origImg</span><span class="o">);</span>
+
+                <span class="n">frame</span><span class="o">.</span><span class="na">showImage</span><span class="o">(</span><span class="n">origImg</span><span class="o">);</span>
+            <span class="o">}</span>
+
+            <span class="n">grabber</span><span class="o">.</span><span class="na">stop</span><span class="o">();</span>
+            <span class="n">detector</span><span class="o">.</span><span class="na">release</span><span class="o">();</span>
+            <span class="n">frame</span><span class="o">.</span><span class="na">dispose</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span>
+        <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Exception: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+        </section>
+
+        <footer>
+          JGaze is maintained by <a href="https://github.com/jmgomezpoveda">jmgomezpoveda</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
   </body>
 </html>
