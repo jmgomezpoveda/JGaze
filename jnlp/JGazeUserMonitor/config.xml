@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="JGaze.input.file"></entry>
+    <entry key="JGaze.input.liveSource">0, 640, 480, 30</entry>
+</properties>
