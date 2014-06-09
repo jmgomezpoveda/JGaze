@@ -10,12 +10,10 @@
         <icon href="images/JGaze.png" kind="default"/>
         <shortcut online="false" install="true">
             <desktop/>
-                <menu submenu="Dreamcoder">
-                <menu submenu="JGaze">
-            </menu>
+            <menu submenu="Dreamcoder"/>
+            <menu submenu="JGaze"/>
         </shortcut>
         <offline-allowed/>
-        <update check="always" policy="always"> 
     </information>
     <update check="background"/>
     <security>
