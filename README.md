@@ -13,6 +13,13 @@ Eye tracking and gaze library in Java, offering the following functionalities:
 
 Using OpenCV for many low-level operations, so the speed is very close to that of implementations in C++.
 
+Execution of JGaze UserMonitor
+------------------------------
+
+Click on the image below for launching the UserMonitor application:
+
+[![alt text](http://java.com/js/webstart.png "Launch")](http://jmgomezpoveda.github.io/JGaze/jnlp/JGazeUserMonitor/launch.jnlp)
+
 Sample program
 --------------
 Sample program that performs face, eye and pupil detection in just a few lines of code:
