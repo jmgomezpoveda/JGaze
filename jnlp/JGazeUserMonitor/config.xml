@@ -4,6 +4,6 @@
     <entry key="JGaze.input.file"></entry>
     <entry key="JGaze.input.liveSource">0, 640, 480, 30</entry>
 
-    <entry key="JGaze.noseDetector">true</entry>
-    <entry key="JGaze.mouthDetector">true</entry>
+    <entry key="JGaze.noseDetector">false</entry>
+    <entry key="JGaze.mouthDetector">false</entry>
 </properties>
