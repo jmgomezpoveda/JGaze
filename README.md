@@ -20,6 +20,10 @@ Click on the image below for launching the UserMonitor application:
 
 [![alt text](http://java.com/js/webstart.png "Launch")](http://jmgomezpoveda.github.io/JGaze/jnlp/JGazeUserMonitor/launch.jnlp)
 
+Note that the sample above needs a webcam in order to capture video.
+
+Also, given that it is not signed, the application will only run if [the security settings in the Java control panel are set to Medium](http://www.java.com/en/download/help/jcp_security.xml).
+
 Sample program
 --------------
 Sample program that performs face, eye and pupil detection in just a few lines of code:
