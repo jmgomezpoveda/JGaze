@@ -22,7 +22,7 @@
     <resources>
         <j2se java-vm-args="-Djava.security.policy=applet.policy" version="1.6+"/>
         <property name="jnlp.packEnabled" value="true" />
-        <jar href="lib/JGazeUserMonitor-1.0-SNAPSHOT.jar" main="true"/>
+        <jar href="lib/JGazeUserMonitor-1.0-SNAPSHOT.jar" main="false"/>
         <jar href="lib/JGaze-1.0-SNAPSHOT.jar"/>
         <jar href="lib/opencv-2.4.9.jar"/>
         <jar href="lib/webbit-full-0.4.15.jar"/>
