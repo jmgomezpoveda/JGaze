@@ -6,4 +6,6 @@
 
     <entry key="JGaze.noseDetector">false</entry>
     <entry key="JGaze.mouthDetector">false</entry>
+    
+    <entry key="JGaze.gaze.screenViewport">false</entry>
 </properties>
