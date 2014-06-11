@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jnlp codebase="http://www.nightearth.com/dreamcoder/OpenCV/JGazeUserMonitor" href="nativelibs.jnlp" spec="1.0+">
+    <information>
+        <title>nativelibs</title>
+        <vendor>Jose Gómez</vendor>
+        <homepage href="http://www.dreamcoder.org"/>
+        <description>nativelibs</description>
+        <description kind="short">nativelibs</description>
+        <offline-allowed/>
+    </information>
+        <update check="background"/>
+        <security>
+    <all-permissions/>
+    </security>
+    <resources os="Linux" arch="arm">
+        <property name="jnlp.packEnabled" value="false" />
+        <jar href="lib/opencv-android-arm-2.4.9.jar"/>
+    </resources>
+    <resources os="Linux" arch="x86 i386 i686">
+        <property name="jnlp.packEnabled" value="false" />
+        <jar href="lib/opencv-linux-x86-2.4.9.jar"/>
+    </resources>
+    <resources os="Linux" arch="x86_64 amd64">
+        <property name="jnlp.packEnabled" value="false" />
+        <jar href="lib/opencv-linux-x86_64-2.4.9.jar"/>
+    </resources>
+    <resources os="Windows" arch="x86 i386 i686">
+        <property name="jnlp.packEnabled" value="false" />
+        <jar href="lib/opencv-windows-x86-2.4.9.jar"/>
+    </resources>
+    <resources os="Windows" arch="x86_64 amd64">
+        <property name="jnlp.packEnabled" value="false" />
+        <jar href="lib/opencv-windows-x86_64-2.4.9.jar"/>
+    </resources>
+    <resources os="Mac OS" arch="x86 i386 i686"/>
+    <resources os="Mac OS" arch="x86_64 amd64">
+        <property name="jnlp.packEnabled" value="false" />
+        <jar href="lib/opencv-macosx-x86_64-2.4.9.jar"/>
+    </resources>
+    <component-desc />
+</jnlp>
