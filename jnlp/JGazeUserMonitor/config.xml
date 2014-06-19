@@ -8,5 +8,6 @@
     <entry key="JGaze.mouthDetector">false</entry>
 
     <entry key="JGaze.gaze.screenViewport">false</entry>
+    <entry key="JGaze.gaze.gazeFixationSaccadeMap">0</entry>
     <entry key="JGaze.io.net.remoteMonitor.captureScreen">true</entry>
 </properties>
