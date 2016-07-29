@@ -22,7 +22,7 @@ Click on the image below for launching the UserMonitor application:
 
 Note that the sample above needs a webcam in order to capture video.
 
-Also, given that it is not signed, the application will only run if [the security settings in the Java control panel are set to Medium](http://www.java.com/en/download/help/jcp_security.xml).
+Also, given that it is not signed, the application will only run if [the URL "http://jmgomezpoveda.github.io" is whitelisted in the security settings of the Java control panel](http://www.java.com/en/download/help/jcp_security.xml).
 
 Sample program
 --------------
@@ -73,3 +73,9 @@ public class PupilDetectMin
     }
 }
 ```
+
+Publications
+------------
+
+Jose Gómez-Poveda, Elena Gaudioso, Evaluation of temporal stability of eye tracking algorithms using webcams, Expert Systems with Applications, Available online 22 July 2016, ISSN 0957-4174, http://dx.doi.org/10.1016/j.eswa.2016.07.029.
+Full text available at http://authors.elsevier.com/a/1TRl83PiGT02IH
