@@ -22,7 +22,7 @@ Click on the image below for launching the UserMonitor application:
 
 Note that the sample above needs a webcam in order to capture video.
 
-Also, given that it is not signed, the application will only run if the URL "http://jmgomezpoveda.github.io" [is whitelisted in the security settings of the Java control panel](http://www.java.com/en/download/help/jcp_security.xml).
+Also, given that it is not signed, the application will only run if [the URL "http://jmgomezpoveda.github.io" is whitelisted in the security settings of the Java control panel](http://www.java.com/en/download/help/jcp_security.xml).
 
 Sample program
 --------------
